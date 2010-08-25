@@ -14,4 +14,4 @@ gem 'bson_ext', :require => "mongo"
 
 
 # Padrino
-gem 'padrino', "0.9.14"
+gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
