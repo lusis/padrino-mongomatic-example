@@ -1,0 +1,25 @@
+<!doctype html>
+%html.no-js{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title My Blog Posts!
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "/css/style.css?v=1", :rel => "stylesheet"}/
+  %body
+    #container
+      %header
+      #main
+      - form_for @post, url(:post, :create) do |f|
+        .group
+          =f.label :name
+          =f.text_field :name
+        .group
+          =f.label :author
+          =f.text_field :author
+        .group
+          =f.label :body
+          =f.text_area :body
+        .group
+          =f.submit
+      %footer
+    / ! end of #container
