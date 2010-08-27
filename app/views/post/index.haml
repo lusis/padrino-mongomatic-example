@@ -1,0 +1,19 @@
+.block
+  .content
+    %h2.title
+    .inner
+      %table.table
+        %tr
+          %th.first Name
+          %th Author
+          %th.last="&nbsp;"
+        -@posts.each do |post|
+          %tr
+            %td.first=post["name"]
+            %td=post["author"]
+            %td.last
+              =button_to :edit, url(:post, :edit, :id => post["_id"]), :method => :get, :class => :button_to 
+              ="|"
+              =button_to :delete, url(:post, :destroy, :id => post["_id"]), :method => :delete, :class => :button_to
+      .actions-bar.wat-cf
+        .actions="&nbsp;"

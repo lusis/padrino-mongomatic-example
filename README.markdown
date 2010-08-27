@@ -16,16 +16,15 @@ Anyway. Ensure you have mongodb running locally. Do the following:
 	bundle install
 	padrino start
 
-You should now be able to go to [here](http://localhost:3000/post/new) and create a new post.
+You should now be able to go to [here](http://localhost:3000/post) and create a new post.
 
 Missing Functionality
 ---------------------
-- Something resembling a pleasing interface
-I suck at interfaces. The point of this demo was to show you the controllers and views. I'll leave pretty up to you.
-- No delete
-I plan on adding it in.
-- No exceptions thrown
-I plan on adding it in.
+ - No exceptions thrown
+  I plan on adding it in.
+ - Edit seems to not be populating field elements
+  Investigating. I think it has to do with the format of attributes (model["attribute"] vs model.attribute)
+  I should be able to test this with some defs in the model. If so, it's a bug in Padrino I think. Other ORMs use the same syntax I *THINK*
 
 Hopefully you can see from the _app/controllers/post.rb_ how to convert Mongomatic conventions into Padrino conventions. That's the real goal and usually the hardest part of using any new framework.
 	
