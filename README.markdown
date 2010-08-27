@@ -18,6 +18,11 @@ Anyway. Ensure you have mongodb running locally. Do the following:
 
 You should now be able to go to [here](http://localhost:3000/post) and create a new post.
 
+Changes
+-------
+
+Lifted a skeleton of the Padrino admin theme for the demo. Looks much better. It even flashes!
+
 Missing Functionality
 ---------------------
  - No exceptions thrown
